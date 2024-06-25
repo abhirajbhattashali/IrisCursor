@@ -30,6 +30,7 @@ while True:
             cv2.circle(frame, (x, y), 3, (0, 255, 255))
         if (left[0].y-left[1].y)<0.004:
             pyautogui.click()
+            pyautogui.FAILSAFE = False
             pyautogui.sleep(1)
     k = cv2.waitKey(30) & 0xff
     if k == 27:
